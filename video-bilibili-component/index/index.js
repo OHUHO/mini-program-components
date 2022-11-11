@@ -27,6 +27,11 @@ Page({
         text: '第 3s 出现的弹幕',
         color: '#ff00ff',
         time: 3
+      },
+      {
+        text: '第 36s 出现的弹幕',
+        color: '#ff00ff',
+        time: 36
       }
     ],
     isPlay: false,

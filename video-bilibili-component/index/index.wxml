@@ -8,7 +8,7 @@
 		enable-danmu 
 		danmu-btn 
 		controls 
-    object-fit="{{contain}}"
+    	object-fit="{{contain}}"
 		bindtap="doubleClickPlayAndPause">
 	</video>
 
@@ -19,7 +19,7 @@
 	<view>
 		<scroll-view class="scroll-x" 
 			scroll-x="true" 
-			scroll-left="{{scrollLeft}}" 
+			scroll-left="{{scrollLeft}}"
 			scroll-with-animation>
 			<block wx:for-items="{{tabs}}" wx:key="index">
 				<view id="{{index}}" 
@@ -28,10 +28,15 @@
 					{{item}}
 				</view>
 			</block>
+			<block>
+				<view class="item danmu">
+					<image src="/images/danmu.png"></image>
+				</view>
+			</block>
 		</scroll-view>
 	</view>
 	<swiper class="swiper-box" 
-		style="height:calc(100vh - 80rpx);"  
+		style="height:calc(100vh - 76rpx);"  
 		bindchange="change" 
 		current="{{activeIndex}}">
 		<swiper-item>
