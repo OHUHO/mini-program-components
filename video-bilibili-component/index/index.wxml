@@ -103,9 +103,5 @@
 				</view>
 			</scroll-view>
 		</swiper-item>
-		
-		
 	</swiper>
-
-
 </view>
