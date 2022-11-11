@@ -1,0 +1,143 @@
+/* @import "../lib/weui.wxss"; */
+.video-container {
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+video {
+  width: 100%;
+}
+
+
+.scroll-x{
+  white-space: nowrap;
+  border-bottom: 1px solid #e6e5e5;
+  padding: 2rpx 0;
+}
+.scroll-x .item{
+  display: inline-block;
+  width: 74rpx;
+  text-align: center;
+  margin-left: 90rpx;
+  color: #828282;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.scroll-x .item.active{
+  position: relative;
+  color: #F9A7A7;
+  border-bottom: 6rpx solid #F9A7A7 ;
+}
+.swiper-box {
+  
+
+}
+.scroll-y {
+  width: 100%;
+  height: 100%;
+  /* background-color: yellowgreen; */
+}
+
+
+/* 简介 */
+.introduction{
+  /* background-color: yellow; */
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.user text {
+  font-size: 30rpx;
+  margin: 0 10rpx;
+}
+.btn {
+  background-color: #F9A7A7;
+  height: 50rpx;
+  width: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.video-introduction{
+  flex-wrap: wrap;
+  margin: 10rpx 0;
+}
+
+.label-wrapper {
+  background-color: rgb(229, 226, 226);
+  border-radius: 10rpx;
+  color: #F9A7A7;
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+.label-wrapper image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: -6rpx;
+
+}
+.video-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #bfbfbf;
+  font-size: 26rpx;
+}
+.view-counts{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30rpx;
+}
+.view-counts image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.good-collect{
+  display: flex;
+  flex-direction: row;
+  font-size: 20rpx;
+  color: #bfbfbf;
+  margin: 20rpx 0;
+}
+.good-collect image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+/* 评论 */
+.comment {
+  padding: 20rpx;
+  /* background-color: rgb(168, 247, 220); */
+  height: 100%;
+}

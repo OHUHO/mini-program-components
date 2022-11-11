@@ -1,0 +1,19 @@
+<!--components/Video-Recommend.wxml-->
+<view class="video-container">
+  <view class="video-item" wx:for="{{videoRecommendList}}" wx:key="index">
+    <view class="video">
+      <image src="{{item.poster}}" mode="aspectFill"/>
+      <view class="video-info">
+        <text class="title">{{item.title}}</text>
+        <view class="user-view">
+          <text>作者: {{item.author}}</text>
+          <view class="view-counts">
+            <label>{{item.viewCounts}}</label>
+            <label>{{item.commentCounts}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

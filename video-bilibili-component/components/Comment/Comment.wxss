@@ -1,0 +1,101 @@
+/* components/comment/comment.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.comment-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    padding: 10rpx 0;
+    /* color: red; */
+}
+.comment-content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50rpx;
+}
+
+
+/* 下面是父级、子级评论的公共样式 */
+.parent-comment, .child-comment{
+    display: flex;
+    flex-direction: row;
+    margin-top: 24rpx;
+}
+.left {
+    /* background-color: green; */
+}
+.left .portrait {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.username-row {
+    /* background-color: red; */
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+.username-row label{
+    line-height: 32rpx;
+    margin-bottom: 10rpx;
+}
+.username-row .username {
+    font-size: 30rpx;
+}
+.username-row .time {
+    font-size: 24rpx;
+    color: #868585;
+}
+
+.time-comment-goods {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0rpx;
+    /* background-color: yellow; */
+}
+.time-comment-goods .time {
+    font-size: 24rpx;
+    color: #868585;
+
+}
+.comment-goods {
+    display: flex;
+    flex-direction: row;
+}
+.comment-goods image{
+    width: 34rpx;
+    height: 34rpx;
+    margin-left: 50rpx;
+    /* background-color: green; */
+}
+
+/* 父级评论的样式 */
+.parent-comment {
+    /* padding: 18rpx 0; */
+}
+
+/* 子级评论的样式 */
+.child-comment {
+    /* background-color: whitesmoke; */
+    /* padding: 10rpx 0; */
+    /* margin-top: 18rpx; */
+}
+.child-comment .portrait {
+    width: 50rpx;
+    height: 50rpx;
+}
+.at {
+    font-size: 30rpx;
+    color: #868585;
+}

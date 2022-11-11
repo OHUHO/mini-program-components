@@ -1,0 +1,71 @@
+<!--components/comment/comment.wxml-->
+<!-- 评论组件 -->
+<view class="container">
+    <view class="comment-title">评论 {{commentNum}}</view>
+    <!-- 
+        评论框。
+        展示三条评论和查看全部评论
+            点击查看全部评论后弹窗展示评论信息
+                每一条父评论的子评论超过三条显示查看全部按钮
+                    点击查看全部后弹窗展示所有信息
+                    
+         -->
+    <view class="comment-content">
+        <!-- 下面是父级评论内容 -->
+        <view wx:for="{{commentList}}" wx:key="index">
+            <view class="parent-comment">
+                <view class="left">
+                    <image class="portrait" src="{{item.portrait}}"></image>
+                </view>
+                <view class="right">
+                    <view class="username-row">
+                        <label class="username">{{item.username}}</label>
+                        <!-- <label class="time">{{item.creatTime}}</label> -->
+                    </view>
+                    <view>
+                        <text>{{item.commentDetail}}</text>
+                    </view>
+                    <view class="time-comment-goods">
+                        <view class="time">
+                            <label>{{item.creatTime}}</label>
+                        </view>
+                        <view class="comment-goods">
+                            <image src="/images/comment.png"></image>
+                            <image src="/images/good.png"></image>
+                        </view>
+                    </view>
+                    <!-- 判断是否存在子级评论 -->
+                    <view wx:if="{{item.replyList.length != 0}}">
+                        <!-- 下面是子级评论内容 -->
+                        <view wx:for="{{item.replyList}}" wx:for-item="childItem" wx:key="index">
+                            <view class="child-comment">
+                                <view class="left">
+                                    <image class="portrait" src="{{childItem.portrait}}"></image>
+                                </view>
+                                <view class="right">
+                                    <view class="username-row">
+                                        <label class="username">{{childItem.username}}</label>
+                                        <!-- <label class="time">{{childItem.creatTime}}</label> -->
+                                    </view>
+                                    <view>
+                                        <text class="at">@{{childItem.toUsername}}：</text>
+                                        <text>{{childItem.replyDetail}}</text>
+                                    </view>
+                                    <view class="time-comment-goods">
+                                        <view class="time">
+                                            <label>{{item.creatTime}}</label>
+                                        </view>
+                                        <view class="comment-goods">
+                                            <image src="/images/comment.png"></image>
+                                            <image src="/images/good.png"></image>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

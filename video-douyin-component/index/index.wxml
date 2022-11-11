@@ -1,0 +1,115 @@
+<!--pages/popularization/videoDetails/videoDetails.wxml-->
+
+<!-- <wxs src="/utils/utils.wxs" module="tools"></wxs> -->
+<view class="container-video" bindtap="changePlayStatus">
+    <view class="animation-wrapper" animation="{{animation}}">
+        <block wx:for="{{videos}}" wx:key="{{item.poster}}">
+            <view class="animation-image-wrapper">
+                <image class="animation-image" src="{{item.poster}}"></image>
+            </view>
+        </block>
+    </view>
+
+    <video class="video" 
+        id="kdvideo" 
+        bindtouchstart="touchStart"
+        bindtouchend="touchEnd" 
+        bindtouchcancel="touchCancel" 
+        controls="{{false}}"
+        autoplay="{{true}}"
+        object-fit="contain" 
+        hidden="{{animationShow}}" 
+        src="{{videos[videoIndex].videoUrl}}" 
+        loop="{{false}}">
+
+        <!-- 页面的工具栏 -->
+        <view class="tools">
+            <!-- 用户头像 -->
+            <view class='user-image'>
+                <!-- 默认头像 -->
+                <image class="userinfo-avatar" 
+                    wx:if="{{!videos[videoIndex].icon && !userData.headPic}}"
+                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
+                    catchtap='goUserHome'
+                    src="/images/8.jpeg">
+                </image>
+                <image class="userinfo-avatar" 
+                    wx:elif="{{!videos[videoIndex].icon}}"
+                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
+                    catchtap='goUserHome'
+                    src="{{userData.headPic}}">
+                </image>
+                <image class="userinfo-avatar" 
+                    wx:else data-lecturerId="{{videos[videoIndex].lecturerId}}"
+                    catchtap='goUserHome' 
+                    src="{{videos[videoIndex].icon}}">
+                </image>
+
+                <!-- 未关注 -->
+                <image class="userinfo-add" 
+                    wx:if="{{videos[videoIndex].isfans == 0}}" 
+                    src="/images/add.png"
+                    data-index="{{videoIndex}}" 
+                    data-lecturerId="{{videos[videoIndex].lecturerId}}"
+                    catchtap='addLecturerFans'>
+                </image>
+                <!-- 关注 -->
+                <image class="userinfo-add" 
+                    wx:else src="/images/guanzhu.png" 
+                    data-index="{{videoIndex}}"
+                    data-lecturerId="{{videos[videoIndex].lecturerId}}" 
+                    catchtap='delLecturerFans'>
+                </image>
+            </view>
+
+            <!-- 点赞视频 -->
+            <view>
+                <image class="icon right-icon" 
+                    data-likeNum="{{videos[videoIndex].likenum}}"
+                    data-index="{{videoIndex}}" 
+                    data-videoId="{{videos[videoIndex].contentId}}"
+                    wx:if="{{videos[videoIndex].isLike == 0}}" 
+                    src='/images/start.png'>
+                </image>
+                <image class="icon right-icon" 
+                    wx:else src='/images/active.png'>
+                </image>
+                <view class="text">{{videos[videoIndex].likenum}}</view>
+            </view>
+            
+            <!-- 评论 -->
+            <view catchtap='showTalks' 
+                data-videoId="{{videos[videoIndex].contentId}}"
+                data-commnetnum="{{videos[videoIndex].commnetnum}}">
+                <image class="icon right-icon" src='/images/content.png'></image>
+                <view class="text">{{videos[videoIndex].commnetnum}}</view>
+            </view>
+
+        </view>
+
+        <!-- 进度条  -->
+        <view class="jindu-back"></view>
+        <view class="jindu" style='width: {{percent}}%'></view>
+
+        <!-- 其他视频信息 -->
+        <view class="desc">
+            <view class='desc-content tag'>
+                <view class="desc-text">{{videos[videoIndex].description}}</view>
+            </view>
+        </view>
+
+    </video>
+
+    <image class="play-btn" wx:if="{{!playState && !animationShow}}" src="/images/play.png"></image>
+   
+</view>
+<view class='content' wx:if="{{nodata}}">
+    <view class='tab-content-list'>
+        <view class='nodata'>
+            <image src="/images/data.png"></image>
+        </view>
+        <view class='center'>
+            <text>亲,没有获取到数据哦!</text>
+        </view>
+    </view>
+</view>

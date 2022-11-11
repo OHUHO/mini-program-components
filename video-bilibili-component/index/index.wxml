@@ -1,0 +1,105 @@
+<view class="video-container">
+
+	<video id="myVideo" 
+		poster="{{poster}}"
+		src="{{src}}" 
+		binderror="videoErrorCallback" 
+		danmu-list="{{danmuList}}" 
+		enable-danmu 
+		danmu-btn 
+		controls 
+    object-fit="{{contain}}"
+		bindtap="doubleClickPlayAndPause">
+	</video>
+
+	<!-- <input bindblur="bindInputBlur" class="weui-input" type="text" placeholder="在此处输入弹幕内容" />
+	<button bindtap="bindSendDanmu" class="page-body-button" type="primary" formType="submit">发送弹幕</button> -->
+
+
+	<view>
+		<scroll-view class="scroll-x" 
+			scroll-x="true" 
+			scroll-left="{{scrollLeft}}" 
+			scroll-with-animation>
+			<block wx:for-items="{{tabs}}" wx:key="index">
+				<view id="{{index}}" 
+					class="item {{activeIndex == index ? 'active' : ''}}" 
+					bindtap="tabClick">
+					{{item}}
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	<swiper class="swiper-box" 
+		style="height:calc(100vh - 80rpx);"  
+		bindchange="change" 
+		current="{{activeIndex}}">
+		<swiper-item>
+			<scroll-view scroll-y="true" class="scroll-y">
+				<view class="introduction">
+					<!-- 用户头像和关注 -->
+					<view class="userinfo">
+						<view class="user">
+							<image src="/images/7.jpeg"></image>
+							<text>用户名</text>
+						</view>
+						<view class="btn">
+							+ 关注
+						</view>
+					</view>
+					<!-- 视频简介 -->
+					<view class="video-introduction">
+						<label class="label-wrapper">
+							<image src="/images/fire.png"></image>
+							<label class="label">热门</label>
+						</label>
+						<text>视频封面的图片网络资源地址或云文件ID。若 controls 属性值为 false 则设置 poster 无效</text>
+					</view>
+					<!-- 视频播放信息 -->
+					<view class="video-info">
+						<view class="view-counts">
+							<image src="/images/view-counts.png"/>
+							<text>986万</text>
+						</view>
+						<view>2022-11-10</view>
+					</view>
+					<!-- 点赞 收藏 转发等操作 -->
+					<view class="good-collect"> 
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>888</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>9.9万</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>88万</text>
+						</view>
+						<view class="col">
+							<image src="/images/view-counts.png"></image>
+							<text>999</text>
+						</view>
+					</view>
+
+					<!-- 推荐视频组件 -->
+          <Video-Recommend videoRecommendList="{{videoRecommendList}}"></Video-Recommend>
+
+				</view>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item>
+			<scroll-view scroll-y="true" class="scroll-y">
+				<view class="comment">
+					<!-- 评论组件 -->
+          <Comment commentNum="{{commentNum}}" commentList="{{commentList}}"></Comment>
+				</view>
+			</scroll-view>
+		</swiper-item>
+		
+		
+	</swiper>
+
+
+</view>

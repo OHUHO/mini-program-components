@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "视频详情",
+  "usingComponents": {
+    "Video-Recommend": "/components/Video-Recommend/Video-Recommend",
+    "Comment":"/components/Comment/Comment"
+  }
+}
