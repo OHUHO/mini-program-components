@@ -6,7 +6,7 @@
 		binderror="videoErrorCallback" 
 		danmu-list="{{danmuList}}" 
 		enable-danmu 
-		danmu-btn 
+		danmu-btn="{{danmuBtn}}"
 		controls 
     	object-fit="{{contain}}"
 		bindtap="doubleClickPlayAndPause">
@@ -29,8 +29,9 @@
 				</view>
 			</block>
 			<block>
-				<view class="item danmu">
-					<image src="/images/danmu.png"></image>
+				<view class="item danmu" bindtap="danmuBtn">
+					<image wx:if="{{danmuBtn}}" src="/images/danmu.png"></image>
+					<image wx:else src="/images/danmu-close.png"></image>
 				</view>
 			</block>
 		</scroll-view>

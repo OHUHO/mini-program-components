@@ -35,11 +35,12 @@ Page({
       }
     ],
     isPlay: false,
+    danmuBtn: true,
     lastClickTime: 0,
+
 
     tabs: ["简介", "评论"],
     activeIndex: 0,
-    scrollLeft: 0,
 
     videoRecommendList:[
       {
@@ -171,6 +172,15 @@ Page({
     ],
 
   },
+  // 开启/关闭弹幕
+  danmuBtn(){
+    // 是否展示弹幕，只在初始化时有效，不能动态变更
+    // 按钮仅仅第一次点击有效，一旦关闭或开启后就不能操作
+    this.setData({
+      danmuBtn: !this.danmuBtn
+    })
+    console.log(this.danmuBtn)
+  },
   // 输入弹幕
   bindInputBlur: function (e) {
     this.inputValue = e.detail.value
@@ -183,7 +193,6 @@ Page({
       color: getRandomColor()
     })
     // 保存到数据库中
-
 
   },
   // 播放
@@ -229,17 +238,15 @@ Page({
 
 
   tabClick: function (e) {
-    var cur = e.currentTarget.id;
+    var current = e.currentTarget.id;
     this.setData({
-      activeIndex: cur,
-      scrollLeft: cur >= 2 ? ((cur) * 82) : 0	//判断当前选中的个数是否是第3个
+      activeIndex: current,
     });
 
   },
   change: function (e) {
     this.setData({
       activeIndex: e.detail.current,
-      scrollLeft: e.detail.current >= 2 ? ((e.detail.current) * 82) : 0
     })
   },
 
