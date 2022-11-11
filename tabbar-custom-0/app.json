@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/men/men",
+    "pages/pop/pop",
+    "pages/color/color"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#515151",
+    "selectedColor": "#DAA520",
+    "borderStyle": "white",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "item1"
+      },
+      {
+        "pagePath": "pages/pop/pop",
+        "text": "item2"
+      },
+      {
+        "pagePath": "pages/men/men",
+        "text": "item3"
+      },
+      {
+        "pagePath": "pages/color/color",
+        "text": "item4"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "item5"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
