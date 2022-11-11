@@ -1,1 +1,4 @@
 /* men/men.wxss */
+page{
+  background-color: black;
+}
