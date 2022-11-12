@@ -230,19 +230,16 @@ Page({
       lastClickTime: currentClickTime
     })
   },
-
   videoErrorCallback: function (e) {
     console.log('视频错误信息:')
     console.log(e.detail.errMsg)
   },
-
 
   tabClick: function (e) {
     var current = e.currentTarget.id;
     this.setData({
       activeIndex: current,
     });
-
   },
   change: function (e) {
     this.setData({

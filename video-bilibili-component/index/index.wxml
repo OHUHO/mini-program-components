@@ -19,7 +19,6 @@
 	<view>
 		<scroll-view class="scroll-x" 
 			scroll-x="true" 
-			scroll-left="{{scrollLeft}}"
 			scroll-with-animation>
 			<block wx:for-items="{{tabs}}" wx:key="index">
 				<view id="{{index}}" 
@@ -99,7 +98,9 @@
 			<scroll-view scroll-y="true" class="scroll-y">
 				<view class="comment">
 					<!-- 评论组件 -->
-          <Comment commentNum="{{commentNum}}" commentList="{{commentList}}"></Comment>
+          			<Comment commentNum="{{commentNum}}" 
+						commentList="{{commentList}}">
+					</Comment>
 				</view>
 			</scroll-view>
 		</swiper-item>
