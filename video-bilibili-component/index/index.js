@@ -24,9 +24,37 @@ Page({
         time: 1
       },
       {
+        text: '第 2s 出现的弹幕',
+        color: '#ff00ff',
+        time: 2
+      },
+      {
         text: '第 3s 出现的弹幕',
         color: '#ff00ff',
         time: 3
+      },{
+        text: '第 4s 出现的弹幕',
+        color: '#ff0000',
+        time: 4
+      },
+      {
+        text: '第 5s 出现的弹幕',
+        color: '#ff00ff',
+        time: 5
+      },
+      {
+        text: '第 5s 出现的弹幕',
+        color: '#ff00ff',
+        time: 5
+      },{
+        text: '第 5s 出现的弹幕',
+        color: '#ff0000',
+        time: 5
+      },
+      {
+        text: '第 8s 出现的弹幕',
+        color: '#ff00ff',
+        time: 8
       },
       {
         text: '第 36s 出现的弹幕',
