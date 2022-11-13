@@ -15,7 +15,7 @@ Page({
   inputValue: '',
   data: {
     // 视频封面
-    poster: 'https://gimg0.baidu.com/gimg/src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F1a3bf51c21fb046eb10604fa21ad0a2d.jpeg&refer=http%3A%2F%2Fwww.baidu.com&app=2026&size=f672_448&n=0&g=0n&q=80?sec=0&t=b0afbfa6902e4633e02b15f2678eeaba#pskt#&imgName=avatar&imgLink=https%3A%2F%2Fhaokan.baidu.com%2Fweb%2Fsearch%2Fpage%3Fquery%3D%25E5%25AE%25A0%25E7%2589%25A9%26sfrom%3Drecommend',
+    poster: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fcd%2F05%2Fdc%2Fcd05dc90a63739a47d7b301a02205b7e.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1670910759&t=60761c88d0f4240feda3a49a98b1cfe7',
     src: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
     danmuList: [
       {
