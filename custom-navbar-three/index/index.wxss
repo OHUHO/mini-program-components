@@ -1,4 +1,71 @@
-.intro {
-  margin: 30px;
+
+.scroll-wrapper {
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  background: #FFF;
+  box-sizing: border-box;
+  /* margin-left: 150rpx; */
+  position: fixed;
+  z-index: 100;
+}
+
+/* 去掉滚动条 */
+::-webkit-scrollbar {
+  /* width: 0;
+  height: 0;
+  color: transparent; */
+}
+
+.navigate-item {
+  display: inline-block;
   text-align: center;
+  margin: 0 30rpx;
+}
+
+.names {
+  font-size: 36rpx;
+  color: #3c3c3c;
+}
+
+.names.active {
+  color: #F9A7A7;
+  font-weight: bold;
+  font-size: 38rpx;
+}
+
+.currtline {
+  margin-top: 4rpx;
+  width: 80rpx;
+  height: 6rpx;
+  border-radius: 4rpx;
+}
+
+.currtline.active {
+  background: #F9A7A7;
+  transition: all .3s;
+}
+
+.tab_title {
+  margin: 20rpx;
+  border: 1px solid #F9A7A7;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+swiper {
+  min-height: 100vh;
+}
+
+.swiper-item {
+  /* width: 100%; */
+  margin-top: 20rpx;
+  /* padding: 0 10rpx; */
+  /* margin-bottom: 444rpx; */
+  padding-bottom: 100rpx;
+}
+
+
+scroll-view {
+  height: calc(100vh - 100rpx);
+  height: 100vh;
 }

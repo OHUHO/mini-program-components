@@ -2,10 +2,58 @@ const app = getApp()
 
 Page({
   data: {
+    menuButtonHeight: 0,
+    menuButtonTop: 0,
+    isRefresh: false,
+    currentTab: 0,
+
+    tabList: [
+      {
+        name: '推荐'
+      },
+      {
+        name: '文章'
+      },
+      {
+        name: '视频'
+      }
+    ],
+  },
+  onLoad(){
+    const res = wx.getMenuButtonBoundingClientRect()
+    this.setData({
+      menuButtonHeight: res.height,
+      menuButtonTop: res.top
+    })
+  
 
   },
-  onLoad() {
-    console.log('代码片段是一种迷你、可分享的小程序或小游戏项目，可用于分享小程序和小游戏的开发经验、展示组件和 API 的使用、复现开发问题和 Bug 等。可点击以下链接查看代码片段的详细文档：')
-    console.log('https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html')
+  tabNav(e) {
+    let currentTab = e.currentTarget.dataset.index
+    this.setData({
+      currentTab
+    })
+  },
+  handleSwiper(e) {
+    let {current,source} = e.detail
+    if (source === 'autoplay' || source === 'touch') {
+      const currentTab = current
+      this.setData({
+        currentTab
+      })
+    }
+  },
+  refresherpulling() {
+    wx.showLoading({
+      title: '刷新中'
+    })
+    setTimeout(() => {
+      this.setData({
+        isRefresh: false
+      })
+      wx.showToast({
+        title: '加载完成'
+      })
+    }, 1000)
   },
 })

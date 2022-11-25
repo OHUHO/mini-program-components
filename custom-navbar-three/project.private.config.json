@@ -3,5 +3,6 @@
     "projectname": "custom-navbar-three",
     "setting": {
         "compileHotReLoad": true
-    }
+    },
+    "libVersion": "2.25.4"
 }

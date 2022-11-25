@@ -1,1 +1,64 @@
-<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<scroll-view 
+  class="scroll-wrapper" 
+  scroll-x 
+  scroll-with-animation="true"
+  style="margin-top: {{menuButtonTop*2+4}}rpx; height:{{menuButtonHeight*2}}rpx">
+    <view class="navigate-item" 
+      id="item{{index}}" 
+      wx:for="{{tabList}}" 
+      wx:key="index" 
+      data-index="{{index}}"
+      bindtap="tabNav">
+        <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
+        <view class="currtline {{currentTab === index ? 'active' : ''}}" wx:if="{{currentTab === index}}"></view>
+    </view>
+</scroll-view>
+
+
+<swiper indicator-dots="{{false}}" bindchange="handleSwiper" current="{{currentTab}}">
+  <view style="margin-top: 174rpx;">
+
+    <swiper-item style="overflow: scroll;">
+        <scroll-view 
+            scroll-y 
+            refresher-enabled 
+            refresher-background="#F6F7F8" 
+            refresher-triggered="{{isRefresh}}"
+            bindrefresherrefresh="refresherpulling"  
+            bindscrolltolower="handleTolower">
+            <view class="swiper-item">
+                页面一
+            </view>
+        </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+        <scroll-view 
+          scroll-y 
+          refresher-enabled 
+          refresher-background="#F6F7F8" 
+          refresher-triggered="{{isRefresh}}"
+          bindrefresherrefresh="refresherpulling" 
+          bindscrolltolower="handleTolower">
+            <view class="swiper-item">
+              页面二
+            </view>
+        </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+        <scroll-view 
+          scroll-y 
+          refresher-enabled 
+          refresher-background="#F6F7F8" 
+          refresher-triggered="{{isRefresh}}"
+          bindrefresherrefresh="refresherpulling" 
+          bindscrolltolower="handleTolower">
+            <view class="swiper-item">
+              页面三
+            </view>
+        </scroll-view>
+    </swiper-item>
+
+  </view>
+</swiper>
