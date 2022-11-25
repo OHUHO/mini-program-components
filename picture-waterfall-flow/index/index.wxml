@@ -1,1 +1,28 @@
-<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<view class="content">
+  <view class="left">
+    <block wx:for="{{videoList}}" wx:key="index">
+      <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+    </block>
+  </view>
+  <view class="right">
+    <block wx:for="{{videoList}}" wx:key="index">
+      <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+    </block>
+  </view>
+</view>
+<template name="item">
+  <view class="item" data-id="{{id}}" bindtap="videoDetails">
+    <image class="item-img" src="{{url}}" mode="widthFix"></image>
+    <view class="item-title-box">
+      <navigator url="url" class="item-title">{{title}}</navigator>
+    </view>
+    <view class="name">
+      <image class="item-ava" src="{{avatar}}"></image>
+      <text class="name-title">{{name}}</text>
+      <view class="heart">
+        <text>❤  </text>
+        <text> {{num}}</text>
+      </view>
+    </view>
+  </view>
+</template>
