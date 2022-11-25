@@ -11,7 +11,7 @@
 |  video-douyin-component  |           仿抖音视频           | ![image-20221110145811187](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131624276.png) | ![image-20221110145909108](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131624572.png) |
 |     tabbar-custom-0      | 自定义底部tabBar（中间为页面） | ![image-20221113163052949](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131630013.png) | ![image-20221113163105042](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131631147.png) |
 |     tabbar-custom-1      | 自定义底部tabBar（中间非页面） | ![image-20221113163220298](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131632348.png) | ![image-20221113163243567](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211131632641.png) |
-|          待添加          |                                |                                                              |                                                              |
+|  picture-waterfall-flow  |        图片/视频瀑布流         | ![image-20221125163016430](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211251630631.png) | ![image-20221125163119351](https://cdn.jsdelivr.net/gh/OHUHO/picture-bed/BlogImages/202211251631475.png) |
 
 
 
