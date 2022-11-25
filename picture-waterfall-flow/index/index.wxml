@@ -1,24 +1,23 @@
 <view class="content">
   <view class="left">
     <block wx:for="{{videoList}}" wx:key="index">
-      <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+      <template wx:if="{{index%2==0}}" is="item" data="{{...item}}"></template>
     </block>
   </view>
   <view class="right">
     <block wx:for="{{videoList}}" wx:key="index">
-      <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+      <template wx:if="{{index%2==1}}" is="item" data="{{...item}}"></template>
     </block>
   </view>
 </view>
+
 <template name="item">
-  <view class="item" data-id="{{id}}" bindtap="videoDetails">
-    <image class="item-img" src="{{url}}" mode="widthFix"></image>
-    <view class="item-title-box">
-      <navigator url="url" class="item-title">{{title}}</navigator>
-    </view>
-    <view class="name">
-      <image class="item-ava" src="{{avatar}}"></image>
-      <text class="name-title">{{name}}</text>
+  <view class="item" data-id="{{id}}" bindtap="details">
+    <image class="cover" src="{{url}}" mode="widthFix"></image>
+    <text class="title">{{title}}</text>
+    <view class="user">
+      <image class="portrait" src="{{avatar}}"></image>
+      <text class="name">{{name}}</text>
       <view class="heart">
         <text>❤  </text>
         <text> {{num}}</text>

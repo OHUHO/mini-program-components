@@ -53,5 +53,8 @@ Page({
       },
     ]
   },
+  details(){
+    console.log('Click Me！')
+  }
 
 })
