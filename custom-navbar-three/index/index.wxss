@@ -4,16 +4,17 @@
   -webkit-overflow-scrolling: touch;
   background: #FFF;
   box-sizing: border-box;
-  /* margin-left: 150rpx; */
+  margin-left: 150rpx;
   position: fixed;
   z-index: 100;
+  /* background-color: red; */
 }
 
 /* 去掉滚动条 */
 ::-webkit-scrollbar {
-  /* width: 0;
+  width: 0;
   height: 0;
-  color: transparent; */
+  color: transparent;
 }
 
 .navigate-item {

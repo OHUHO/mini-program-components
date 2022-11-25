@@ -2,7 +2,7 @@
   class="scroll-wrapper" 
   scroll-x 
   scroll-with-animation="true"
-  style="margin-top: {{menuButtonTop*2+4}}rpx; height:{{menuButtonHeight*2}}rpx">
+  style="margin-top: {{menuTop}}px; height:{{menuHeight}}px">
     <view class="navigate-item" 
       id="item{{index}}" 
       wx:for="{{tabList}}" 
