@@ -7,7 +7,6 @@
   margin-left: 150rpx;
   position: fixed;
   z-index: 100;
-  /* background-color: red; */
 }
 
 /* 去掉滚动条 */
@@ -57,16 +56,13 @@ swiper {
   min-height: 100vh;
 }
 
-.swiper-item {
-  /* width: 100%; */
-  margin-top: 20rpx;
-  /* padding: 0 10rpx; */
-  /* margin-bottom: 444rpx; */
-  padding-bottom: 100rpx;
-}
-
-
 scroll-view {
   height: calc(100vh - 100rpx);
   height: 100vh;
 }
+
+.swiper-item {
+  padding:20rpx;
+  padding-bottom: 100rpx;
+}
+
