@@ -56,11 +56,11 @@ Component({
     publish() {
       // 调用组件中的方法显示弹窗
       // this.selectComponent("#publishElement").showModal()
-      wx.scanCode({
-        success (res) {
-          console.log(res)
-        }
-      })
+      // wx.scanCode({
+      //   success (res) {
+      //     console.log(res)
+      //   }
+      // })
     },
 
 
